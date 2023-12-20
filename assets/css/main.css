@@ -724,7 +724,7 @@ p {
 .navbar-nav .nav-item a {
   font-size: 18px;
   font-weight: 400;
-  color: #fff;
+  color: #000000;
   -webkit-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
   padding: 10px 0;
@@ -767,18 +767,15 @@ p {
 
 /* ====== hero-area ===== */
 .hero-section {
-  position: relative;
-  z-index: 1;
-  background-image: url("../img/hero/whitevector.svg");
+  background-image: url("../img/hero/hero.png");
   background-repeat: no-repeat;
+  /*background-position: center;*/
+  background-size: contain;
+  height: 130vh;
 }
 
-.bg {
-  position: relative;
-  z-index: 1;
-  padding: 200px 0 50px;
-  background-image: url("../img/hero/bluevector.svg");
-  background-repeat: no-repeat;
+.hero-content {
+  margin-top: 20rem;
 }
 
 @media (max-width: 767px) {
