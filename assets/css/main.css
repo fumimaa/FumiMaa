@@ -11,6 +11,22 @@
           align-items: center;
 }
 
+@font-face {
+  font-family: 'bebas'; /* Nombre de la nueva fuente */
+  src: url('../fonts/BebasKai.woff') format('woff'); /* Formato WOFF */
+  /* Puedes agregar más formatos aquí si los tienes disponibles */
+  font-weight: normal; /* Peso de la fuente (normal, bold, etc.) */
+  font-style: normal; /* Estilo de la fuente (normal, italic, etc.) */
+}
+
+@font-face {
+  font-family: 'futura'; /* Nombre de la nueva fuente */
+  src: url('../fonts/FuturaStdMedium.woff') format('woff'); /* Formato WOFF */
+  /* Puedes agregar más formatos aquí si los tienes disponibles */
+  font-weight: normal; /* Peso de la fuente (normal, bold, etc.) */
+  font-style: normal; /* Estilo de la fuente (normal, italic, etc.) */
+}
+
 /*===========================
     01.COMMON css 
 ===========================*/
@@ -19,7 +35,7 @@ html {
 }
 
 body {
-  font-family: Arimo;
+  font-family: 'futura';
   font-weight: normal;
   font-style: normal;
   color: #f1f5ff;
@@ -85,15 +101,18 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Arimo;
-  font-weight: 700;
+  font-family: 'bebas';
   margin: 0px;
+  font-weight: 400;
   color: #e0e9ff;
+  letter-spacing: 2.4px;
+  font-size: 48px;
 }
 
 .section-title p {
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 28px;
+  line-height: 42px;
+  letter-spacing: 1.4px;
 }
 
 h1 a,
@@ -106,7 +125,15 @@ h6 a {
 }
 
 h1 {
-  font-size: 45px;
+  font-size: 48px;
+}
+
+@media only screen and (max-width: 576px) {
+  .section-title p {
+    font-size: 18px;
+    line-height: 38px;
+    letter-spacing: 1.4px;
+  }
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
@@ -194,7 +221,7 @@ p {
   font-weight: 400;
   line-height: 26px;
   margin: 0px;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'futura', sans-serif;
 }
 
 .img-bg {
@@ -243,6 +270,12 @@ p {
   overflow: hidden;
 }
 
+@media (max-width: 767px) {
+  .main-btn {
+    font-size: 14px;
+  }
+}
+
 .main-btn:hover {
   color: #fff;
 }
@@ -283,7 +316,7 @@ p {
 .scroll-top {
   width: 45px;
   height: 45px;
-  background: #5864FF;
+  background: #ffc614;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -309,7 +342,7 @@ p {
 
 .scroll-top:hover {
   color: #fff;
-  background: rgba(88, 100, 255, 0.8);
+  background: #ffc614;
 }
 
 @keyframes animation1 {
@@ -762,7 +795,17 @@ p {
 
 .hero-content {
   margin-top: 20rem;
-  padding-left: 7rem;
+  padding-left: 10%;
+  padding-right: 28%;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+@media (max-width: 1485px) {
+  .hero-content {
+    padding-right: 20%;
+    margin-top: 15rem;
+  }
 }
 
 @media (max-width: 767px) {
@@ -771,17 +814,17 @@ p {
   }
 
   .hero-content {
-    padding-left: 3rem;
+    padding-left: 2rem;
+    text-align: left;
   }
 }
 
-.hero-section .hero-content {
-  margin-bottom: 100px;
-}
 
-@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+@media only screen and (min-width: 768px) and (max-width: 991px) {
   .hero-section .hero-content {
     margin-bottom: 0px;
+    padding-right: 58%;
+    margin-top: 9rem;
   }
 }
 
@@ -791,29 +834,26 @@ p {
   color: #000000;
 }
 
-@media only screen and (min-width: 1200px) and (max-width: 1399px) {
-  .hero-section .hero-content h1 {
-    font-size: 52px;
-  }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .hero-section .hero-content h1 {
-    font-size: 2rem;
-  }
-}
 
 @media (max-width: 767px) {
-  .hero-section {
-    background-image: url("../img/hero/hero-mobile.png");
-  }
-
   .hero-content {
     margin-top: 0;
+    padding-right: 40%;
   }
 
   .hero-section .hero-content h1 {
     font-size: 32px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    background-image: url("../img/hero/hero-mobile.svg");
+    height: 146vh;
+  }
+
+  .hero-content {
+    padding-left: 0.6rem;
   }
 }
 
@@ -825,22 +865,18 @@ p {
 
 .hero-section .hero-content p {
   margin-bottom: 40px;
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 28px;
+  letter-spacing: 1.4px;
+  line-height: 42px;
   color: #000000;
 }
 
-@media only screen and (min-width: 1400px) {
+@media  (max-width: 576px) {
   .hero-section .hero-content p {
-    padding-right: 120px;
+    font-size: 20px;
   }
 }
 
-@media only screen and (min-width: 1200px) and (max-width: 1399px) {
-  .hero-section .hero-content p {
-    padding-right: 70px;
-  }
-}
 
 .hero-section .hero-content .main-btn {
   border-color: #000000;
@@ -1094,6 +1130,12 @@ p {
   }
 }
 
+@media (max-width: 576px) {
+  .custom-margin {
+    margin-top: -500px;
+  }
+}
+
 .about-section .about-img {
   position: relative;
   z-index: 1;
@@ -1163,9 +1205,13 @@ p {
   padding: 75px 0;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+@media only screen and (min-width: 768px) and (max-width: 991px) {
   .about-section .about-img-2 {
     margin-bottom: 70px;
+  }
+  .about-section .about-img-2 .shape.shape-1 {
+    width: 75%;
+    right: -65px;
   }
 }
 
@@ -1178,20 +1224,15 @@ p {
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  right: -140px;
+  right: -65px;
+  width: 130%;
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .about-section .about-img-2 .shape.shape-1 {
-    width: 130%;
-    right: -50px;
-  }
-}
 
-@media (max-width: 767px) {
+@media  only screen and (max-width: 767px) {
   .about-section .about-img-2 .shape.shape-1 {
-    width: 115%;
-    right: -17px;
+    width: 110%;
+    right: 30px;
   }
 }
 
@@ -1203,6 +1244,7 @@ p {
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .about-section .about-img-2 .shape.shape-2 {
     width: 75%;
+    right: -65px;
   }
 }
 
@@ -1386,7 +1428,7 @@ p {
 
 /* ======= footer css ======= */
 .footer {
-  background-image: url("../img/footer/footer-bg.svg");
+  background-image: url("../img/footer/footer.svg");
   background-size: cover;
   background-position: top right;
   padding-top: 260px;
