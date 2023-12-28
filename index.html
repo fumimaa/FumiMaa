@@ -76,7 +76,7 @@
                       <a class="page-scroll text-uppercase" href="#about">Nosotros</a>
                     </li>
                     <li class="nav-item">
-                      <a class="page-scroll text-uppercase" href="#portfolio">Servicios</a>
+                      <a class="page-scroll text-uppercase" href="#servicios">Servicios</a>
                     </li>
                     <li class="nav-item">
                       <a class="page-scroll text-uppercase" href="#contacto">Contacto</a>
@@ -108,7 +108,7 @@
               Adaptamos nuestros servicios a tus necesidades.
             </p>
             <a
-              href="#"
+              href="#contacto"
               class="main-btn border-btn btn-hover wow fadeInUp"
               data-wow-delay=".6s"
               >CONTACTANOS</a
@@ -209,7 +209,7 @@
         <!-- ======== feature-section end ======== -->
 
     <!-- ======== about2-section start ======== -->
-    <section id="portfolio" class="about-section pt-150">
+    <section id="servicios" class="about-section pt-150">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-xl-6 col-lg-6">
@@ -234,11 +234,6 @@
                 alt=""
                 class="shape shape-1"
               />
-              <!--<img
-                src="assets/img/about/right-dots.svg"
-                alt=""
-                class="shape shape-2"
-              />-->
             </div>
           </div>
         </div>
@@ -302,8 +297,52 @@
     </section>
     <!-- ======== feature-section end ======== -->
 
+    
+    <!-- ======== form-section start ======== -->
+    <section id="contacto" class="about-section pt-150">
+      <div class="container form-container">
+        <div class="row align-items-center">
+            <div class="col-xl-6 col-lg-6">
+              <div class="about-content">
+                <div class="section-title mb-30">
+                  <h2 class="mb-25 wow fadeInUp" data-wow-delay=".2s">
+                    Comunicate para obtener más información
+                  </h2>
+                  <p class="wow fadeInUp" data-wow-delay=".4s">
+                    Nos adaptamos a tus necesidades.  Detallanos en tu mensaje las medidas aproximadas, si es hogar o comercio y cuál es tu zona. </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-6">
+            <div class=" wow fadeIn" data-wow-delay=".5s">
+              <form action="https://formspree.io/f/mleqeegk" method="POST">
+                <!-- Campo de Nombre -->
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+            
+                <!-- Campo de Correo Electrónico -->
+                <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
+            
+                <!-- Campo de Teléfono -->
+                <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
+                
+                <!-- Campo de Teléfono -->
+                <input type="text" id="metros" name="metros cuadrados" placeholder="Metros Cuadrados" required>
+
+                <!-- Área de Texto para el Mensaje -->
+                <textarea id="mensaje" name="mensaje" placeholder="Mensaje" rows="4" required></textarea>
+            
+                <!-- Botón de Enviar -->
+                <button type="submit">Enviar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ======== form-section end ======== -->
+
     <!-- ======== footer start ======== -->
-    <footer class="footer social" id="contacto">
+    <footer class="footer social">
       <div class="footer-container">
       <a class="navbar-brand marginleftnone nohover" href="index.html">
         <img src="assets/img/logo/logo.png" alt="Logo" />
@@ -312,10 +351,12 @@
         Dedicados a proporcionar soluciones integrales y efectivas para el control de plagas.
       </p>
       <ul>
-        <li><a href="https://api.whatsapp.com/send?phone=%2B541167800928" target="_blank"><i class="lni lni-whatsapp">011 6780 0928</i></a></li>
-        <li><a href="https://www.facebook.com/profile.php?id=100090435407797&amp;mibextid=ZbWKwL" target="_blank"><i class="lni lni-facebook-original">fumi.maa</i></a></li>
-        <li><a href="https://www.instagram.com/fumi.maa/" target="_blank"><i class="lni lni-instagram-original">fumi.maa</i></a></li>
-        <li><a href="mailto:correo@example.com"><i class="lni lni-envelope">fumi.maafumigacion@gmail.com</i></a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=100090435407797&amp;mibextid=ZbWKwL" target="_blank"><i class="lni lni-facebook-original"><span>fumi.maa</span></i></a></li>
+        <li><a href="https://api.whatsapp.com/send?phone=%2B541167800928" target="_blank"><i class="lni lni-whatsapp"><span>011 6780 0928</span></i></a></li>
+      </ul>
+      <ul>
+        <li><a href="https://www.instagram.com/fumi.maa/" target="_blank"><i class="lni lni-instagram-original"><span>fumi.maa</span></i></a></li>
+        <li><a href="mailto:correo@example.com"><i class="lni lni-envelope"><span>fumi.maafumigacion@gmail.com</span></i></a></li>
       </ul>
     </div>
     </footer>

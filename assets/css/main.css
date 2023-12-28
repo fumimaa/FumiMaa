@@ -138,31 +138,31 @@ h1 {
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
-  .section-title h2 {
+  .section-title h2, h3 {
     font-size: 40px;
   }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .section-title h2 {
+  .section-title h2, h3 {
     font-size: 35px;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .section-title h2 {
+  .section-title h2, h3 {
     font-size: 40px;
   }
 }
 
 @media (max-width: 767px) {
-  .section-title h2 {
+  .section-title h2, h3 {
     font-size: 28px;
   }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-  .section-title h2 {
+  .section-title h2, h3 {
     font-size: 32px;
   }
 }
@@ -195,7 +195,7 @@ h2 {
 }
 
 h3 {
-  font-size: 36px;
+  font-size: 32px;
 }
 
 h4 {
@@ -783,6 +783,12 @@ p {
   background-color: #ffc614;
   border-radius: 10px;
   width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar-nav .nav-item a:hover ,.navbar-nav .nav-item a.active, .sticky .navbar-nav .nav-item a.active  {
+    padding: 4px 15px ;
+  }
 }
 
 /* ====== hero-area ===== */
@@ -1487,35 +1493,6 @@ p {
   }
 }
 
-.footer .widget-wrapper .footer-widget .socials {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.footer .widget-wrapper .footer-widget .socials li {
-  margin-right: 20px;
-}
-
-.footer .widget-wrapper .footer-widget .socials li:last-child {
-  margin-right: 0;
-}
-
-.footer .widget-wrapper .footer-widget .socials li a:not(.mail) {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.13);
-  color: #000000;
-}
-
-.footer .widget-wrapper .footer-widget .socials li a:hover:not(.mail) {
-  color: #5864FF;
-  background: #000000;
-}
 
 .mail {
   color: #000000;
@@ -2336,6 +2313,16 @@ p {
   cursor: pointer;
 }
 
+
+@media (max-width: 760px) {
+  .faq h2 {
+    font-size: 32px;
+  }
+  .faq h3 {
+    font-size: 28px;
+  }
+}
+
 .faq p {
   color: rgba(48, 69, 92, 0.8);
   font-size: 25px;
@@ -2442,11 +2429,16 @@ p {
 
 /*Custom Container*/
 
+.social {
+  font-family: 'bebas';
+}
+
 .custom-container {
   padding: 0;
   width: 100%;
   height: 100%;
   text-align: center;
+  flex-direction: column;
 }
 
 .footer-container {
@@ -2454,21 +2446,21 @@ p {
   margin-left: 10%;
   color: black;
   margin-top: auto;
-  width: 60%;
+  width: 50%;
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1500px) {
   .custom-container {
     height: 100%;
   }
 
   .footer-container {
     margin-left: 0;
-    width: 70%;
+    width: 80%;
   }
 
   .social {
-    height: 780px
+    height: 830px
   }
 }
 
@@ -2495,24 +2487,41 @@ p {
 
 .social ul {
   list-style: none;
-  padding: 0.5rem 1rem ;
   font-size: 20px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 1rem;
 }
 
 .social  li {
-  margin-right: 20px; /* Espacio entre los elementos */
   padding: 3px;
   flex: 1;
 }
 
+.footer .widget-wrapper .footer-widget .socials li {
+  margin-right: 20px;
+}
+
+
 .social  a {
   text-decoration: none;
   color: #000; /* Color del texto (negro) */
-  padding: 10px; /* Añade algo de relleno alrededor del texto */
+  padding: 7px; /* Añade algo de relleno alrededor del texto */
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+}
+
+.social a:last-child {
+  margin-right: 0;
+  width: 100%;
+}
+
+.social i {
+  width: 100%;
 }
 
 .social  a:hover:not(.navbar-brand) {
@@ -2522,6 +2531,63 @@ p {
 }
 
 /* Añade estilos específicos para los íconos si es necesario */
-.social i {
-  margin-right: 5px; /* Espacio entre el ícono y el texto */
+.social span {
+  font-family: 'futura';
+  margin: 0 4px;
+}
+
+/*FORM*/
+
+form {
+  max-width: 800px; /* Ancho máximo del formulario */
+  margin: 20px auto; /* Centrar el formulario en la página */
+  padding: 20px;
+  background-color: white; /* Fondo del formulario */
+  border-radius: 12px; /* Borde redondeado */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #0CC1E1; /* Fondo de los campos */
+  color: white; /* Color del texto en los campos */
+}
+
+button {
+  background-color: #000000; /* Color de fondo del botón */
+  color: white; /* Color del texto en el botón */
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #0CC1E1; /* Cambio de color al pasar el ratón */
+}
+
+/* Cambia el color del marcador de posición a blanco */
+input::placeholder,
+textarea::placeholder {
+  color: white;
+}
+
+.form-container {
+  max-width: 90%;
+}
+
+.form-container h2{
+  max-width: 80%;
 }
