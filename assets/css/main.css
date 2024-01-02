@@ -267,7 +267,7 @@ p {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   border: none;
-  background: #5864FF;
+  background: #111111;
   overflow: hidden;
 }
 
@@ -282,9 +282,8 @@ p {
 }
 
 .main-btn.border-btn {
-  border: 2px solid #5864FF;
-  background: transparent;
-  color: #5864FF;
+  background: black;
+  color: #ffffff;
 }
 
 .btn-hover {
@@ -2300,6 +2299,7 @@ p {
   line-height: 42px;
   letter-spacing: 3px;
   font-weight: 100;
+  margin-bottom: 12px;
 }
 
 .faq h3 {
@@ -2339,6 +2339,12 @@ p {
   transform: translate(0, 0);
   margin-top: 14px;
   z-index: 2;
+}
+
+@media only screen and (max-width: 576px) {
+  .faq p {
+    font-size: 16px;
+  }
 }
 
 .faq ul {
@@ -2431,6 +2437,13 @@ p {
   }
 }
 
+.faq .txt-plagas {
+  font-size: 18px;
+}
+
+.faq .txt-plagas b {
+  border-bottom: 2px solid black;
+}
 /*Custom Container*/
 
 .social {
@@ -2446,7 +2459,7 @@ p {
 }
 
 .footer-container {
-  padding:2rem 1rem;
+  padding:1rem 1rem;
   margin-left: 10%;
   color: black;
   margin-top: auto;
@@ -2477,6 +2490,7 @@ p {
 @media only screen and (max-width: 600px) {
   .footer-container {
     padding-bottom: 25%;
+    padding:2rem 1rem;
   }
 }
 
@@ -2522,13 +2536,11 @@ p {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  width: 100%;
   align-items: center;
 }
 
 .social a:last-child {
   margin-right: 0;
-  width: 100%;
 }
 
 .social i {
@@ -2586,7 +2598,7 @@ button {
 }
 
 button:hover {
-  background-color: #0CC1E1; /* Cambio de color al pasar el ratón */
+  background-color: #ffc614; /* Cambio de color al pasar el ratón */
 }
 
 /* Cambia el color del marcador de posición a blanco */
@@ -2601,4 +2613,17 @@ textarea::placeholder {
 
 .form-container h2{
   max-width: 80%;
+}
+
+/*hover custom*/
+
+.hover-custom:hover {
+  background-color: #ffc614 ;
+}
+
+/*credits*/
+
+.credits {
+  font-size: 16px;
+  width: 60%;
 }
