@@ -95,3 +95,26 @@
   // WOW active
   new WOW().init();
 })();
+
+/* Función para manejar eventos de Google Analytics */
+function trackGoogleAnalyticsEvent(element, event) {
+  if (element) {
+    element.addEventListener("click", () => {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        'event': event
+      });
+    });
+  }
+}
+
+/* Definición de elementos y llamada a la función */
+const callBtn = document.getElementById("llamado");
+const whatsappBtn = document.getElementById("whatsapp");
+const stickyWhatsappBtn = document.getElementById("sticky-whatsapp");
+const formBtn = document.getElementById("form-btn");
+
+trackGoogleAnalyticsEvent(callBtn, 'Llamado');
+trackGoogleAnalyticsEvent(whatsappBtn, 'Whatsapp');
+trackGoogleAnalyticsEvent(stickyWhatsappBtn, 'Whatsapp');
+trackGoogleAnalyticsEvent(formBtn, 'Formulario');

@@ -2576,7 +2576,8 @@ label {
 }
 
 input,
-textarea {
+textarea,
+select {
   width: 100%;
   padding: 10px;
   margin-bottom: 16px;
@@ -2626,4 +2627,23 @@ textarea::placeholder {
 .credits {
   font-size: 16px;
   width: 60%;
+}
+
+/*WhatsApp Sticky Btn*/
+
+.btn-whatsapp{
+  display: block;
+  width: 70px;
+  height: 70px;
+  position: fixed;
+  right: 72px;
+  bottom: 23px;
+  border-radius: 50%;
+  line-height: 80px;
+  text-align: center;
+  z-index: 999;
+}
+
+.btn-whatsapp img{
+  width: 60px;
 }

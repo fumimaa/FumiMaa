@@ -323,13 +323,13 @@
                   </h2>
                   <p class="wow fadeInUp" data-wow-delay=".4s">
                     Nos adaptamos a tus necesidades.  Detallanos en tu mensaje las medidas aproximadas, si es hogar o comercio y cuál es tu zona. Podés comunicarte directamente por llamada telefónica las 24hs los 7 días de la semana. También podés escribirnos por mensaje de WhatsApp. O podés contactarte a través del formulario de la web.</p>
-                    <a
+                    <a id="llamado"
                     href="tel:+5491167800928"
                     class="main-btn border-btn btn-hover wow fadeInUp mt-2 hover-custom"
                     data-wow-delay=".6s" target="_blank"
                     ><i class="lni lni-phone"></i>  LLAMANOS AHORA!</a
                   >
-                  <a
+                  <a id="whatsapp"
                   href="https://api.whatsapp.com/send?phone=%2B541167800928" target="_blank"
                   class="main-btn border-btn btn-hover wow fadeInUp mt-2 hover-custom"
                   data-wow-delay=".6s" target="_blank"
@@ -344,29 +344,41 @@
                 <!-- Campo de Nombre -->
                 <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
 
-                <!-- Campo de Correo Electrónico -->
-                <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
-            
                 <!-- Campo de Teléfono -->
                 <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
 
-                <!-- Campo de Domicilio -->
-                <input type="text" id="domicilio" name="domicilio" placeholder="Dirección del Domicilio a fumigar" required>
-                
-                <!-- Campo de Metros Cuadrados -->
-                <input type="text" id="metros" name="metros cuadrados" placeholder="Metros Cuadrados Aproximados" required>
+                <!-- Campo de Plaga -->
+                <select id="plaga" name="plaga" required>
+                  <option value="" disabled selected>Seleccione una plaga</option>
+                  <option value="ratones">Ratones</option>
+                  <option value="polillas">Polillas</option>
+                  <option value="cucarachas">Cucarachas</option>
+                  <option value="hormigas">Hormigas</option>
+                  <option value="hormigas_voladoras">Hormigas Voladoras</option>
+                  <option value="acaros">Ácaros</option>
+                  <option value="chinches_de_cama">Chinches de Cama</option>
+                  <option value="alacranes">Alacranes</option>
+                  <option value="pulgas">Pulgas</option>
+                  <option value="mosquitos">Mosquitos</option>
+                  <option value="babosas">Babosas</option>
+                  <option value="ratas">Ratas</option>
+                </select>
 
-                <!-- Campo de Ambientes -->
-                <input type="text" id="ambientes" name="ambientes" placeholder="Si es hogar cantidad de ambientes">
+                <!-- Campo de Domicilio -->
+                <input type="text" id="domicilio" name="domicilio" placeholder="Barrio/Ciudad" required>
 
                 <!-- Campo de Rubro -->
-                <input type="text" id="rubro" name="rubro" placeholder="Si es comercio indique el rubro">
+                <select id="rubro" name="rubro" required>
+                  <option value="" disabled selected>Seleccione Rubro</option>
+                  <option value="comercial">Comercial</option>
+                  <option value="familia">Familia</option>
+                </select>
 
-                <!-- Área de Texto para el Mensaje -->
-                <textarea id="mensaje" name="mensaje" placeholder="Algún comentario que quiera agregar" rows="4" required></textarea>
+                <!-- Área de Texto para Comentarios -->
+                <textarea id="comentarios" name="comentarios" placeholder="Algún comentario que quiera agregar" rows="4"></textarea>
             
                 <!-- Botón de Enviar -->
-                <button type="submit">Enviar</button>
+                <button type="submit" id="form-btn">Enviar</button>
               </form>
             </div>
           </div>
@@ -397,6 +409,12 @@
     </footer>
     <!-- ======== footer end ======== -->
 
+    <!-- ======== WhatsApp Sticky Button ======== -->
+    <div class="btn-whatsapp">
+      <a href="https://api.whatsapp.com/send?phone=%2B541167800928" target="_blank" id="sticky-whatsapp">
+        <img src="assets/img/whatsapp.png" alt="whatsapp sticky button">
+      </a>
+    </div>
     <!-- ======== scroll-top ======== -->
     <a href="#" class="scroll-top btn-hover">
       <i class="lni lni-chevron-up"></i>
