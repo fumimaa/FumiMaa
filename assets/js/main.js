@@ -116,5 +116,5 @@ const formBtn = document.getElementById("form-btn");
 
 trackGoogleAnalyticsEvent(callBtn, 'Llamado');
 trackGoogleAnalyticsEvent(whatsappBtn, 'Whatsapp');
-trackGoogleAnalyticsEvent(stickyWhatsappBtn, 'Whatsapp');
+trackGoogleAnalyticsEvent(stickyWhatsappBtn, 'Whatsappsticky');
 trackGoogleAnalyticsEvent(formBtn, 'Formulario');
