@@ -1,7 +1,8 @@
 (function () {
+
   //===== Prealoder
 
-  window.onload = function () {
+  /*window.onload = function () {
     window.setTimeout(fadeout, 500);
   };
 
@@ -118,3 +119,35 @@ trackGoogleAnalyticsEvent(callBtn, 'Llamado');
 trackGoogleAnalyticsEvent(whatsappBtn, 'Whatsapp');
 trackGoogleAnalyticsEvent(stickyWhatsappBtn, 'Whatsappsticky');
 trackGoogleAnalyticsEvent(formBtn, 'Formulario');
+
+
+/*MODAL*/
+
+const modalFunction = () => {
+
+  
+  // Selecciona el modal y la "X" para cerrarlo
+  var modal = document.getElementById("imageModal");
+  var closeBtn = document.getElementsByClassName("close")[0];
+
+  if (!modal) return;
+  modal.style.display = "block";
+
+  /* Cierra el modal cuando se hace clic en la "X"*/
+  if (closeBtn){
+    closeBtn.onclick = function() {
+      if (!modal) return;
+      modal.style.display = "none";
+    }
+  }
+
+  /*-Cierra el modal si el usuario hace clic fuera de él*/
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+
+}
+
+modalFunction ();
