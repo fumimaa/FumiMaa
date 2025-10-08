@@ -129,14 +129,14 @@ h1 {
   font-size: 48px;
 }
 
-.slogan {  
-  font-size: 1.125rem;        
-  font-weight: 400;
-  color: #000000;             
-  margin-top: 10px;
-  margin-bottom: 12px;
+.slogan {
+  font-size: 1rem;         
+  font-weight: 400;        
+  color: #222;             
+  letter-spacing: 0.5px;   
+  margin-top: 4px;      
+  margin-bottom: 14px;
   line-height: 1.2;
-  letter-spacing: 0.2px;
 }
 
 @media only screen and (max-width: 576px) {
@@ -2734,4 +2734,14 @@ textarea::placeholder {
 
 .link-entradas:hover {
   background-color: rgba(255, 255, 255, 1);
+}
+
+.slogan {
+  font-size: 1rem;         
+  font-weight: 400;        
+  color: #222;             
+  letter-spacing: 0.5px;   
+  margin-top: 4px;      
+  margin-bottom: 14px;
+  line-height: 1.2;
 }
